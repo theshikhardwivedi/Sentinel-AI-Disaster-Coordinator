@@ -47,7 +47,7 @@ Sentinel employs a **hierarchical, specialized workflow** with a single Commande
 
 A visual representation of the agent workflow and data pipeline.
 
-<img width="1024" height="1024" alt="sentinel_architecture" src="https://github.com/user-attachments/assets/5077820f-2927-4914-b8b4-f77637751611" />
+<img width="1024" height="1024" alt="sentinel_architecture" src="asset/sentinal_architecture.png" />
 
 -----
 
