@@ -26,3 +26,6 @@ __pycache__/
 # FAISS Index (Often large and generated from data)
 *.faiss
 faiss_index/
+
+# Notebook Artifacts
+.ipynb_checkpoints/
