@@ -1,31 +1,59 @@
-# Byte-compiled / optimized / DLL files
+# -------------------------------------------------------------------
+# 1. PYTHON/OS ARTIFACTS
+# -------------------------------------------------------------------
 __pycache__/
 *.pyc
-*.pyd
 *.pyo
+*.pyd
+*~
+.ipynb_checkpoints/  # Jupyter Notebook autosave files
+.vscode/             # VS Code settings (unless shared)
 
-# Virtual environment
-/venv
-/env
+# -------------------------------------------------------------------
+# 2. VIRTUAL ENVIRONMENTS
+# -------------------------------------------------------------------
+# Virtual environment folders
 .venv
+venv
+env
 
-# Distribution / packaging
-/dist
-/build
-/*.egg-info/
+# -------------------------------------------------------------------
+# 3. GEMINI/KAGGLE SPECIFIC OUTPUTS & LOGS
+# -------------------------------------------------------------------
+# The final generated report file (should not be committed before submission)
+# This file is created dynamically during the notebook run.
+SENTINEL_MISSION_LOG.md
 
-# Logs and databases
+# Log files and runtime artifacts
 *.log
-*.sqlite
-/data/
+*.tmp
+temp/
 
-# Environment variables and secrets
-.env
-.DS_Store
-
-# FAISS Index (Often large and generated from data)
-*.faiss
+# -------------------------------------------------------------------
+# 4. RAG / DATA ARTIFACTS
+# -------------------------------------------------------------------
+# FAISS vector store indexes (large binary files)
+*.bin
+*.idx
 faiss_index/
+chroma.sqlite3 # Example for Chroma DB if you switch RAG implementations
+data/embeddings/
 
-# Notebook Artifacts
-.ipynb_checkpoints/
+# -------------------------------------------------------------------
+# 5. SENSITIVE & ENVIRONMENT VARIABLES (CRITICAL)
+# -------------------------------------------------------------------
+# Local environment variables file (contains API keys)
+.env
+.flaskenv
+
+# The actual API key itself (never commit this)
+google_api_key.txt
+api_key.json
+
+# -------------------------------------------------------------------
+# 6. PACKAGE BUILD ARTIFACTS
+# -------------------------------------------------------------------
+# Distribution and build files
+/dist/
+/build/
+*.egg-info/
